@@ -56,7 +56,7 @@ model_swa.fit(X_train, y_train,callbacks=[lr_schedule_obj,swa_obj],validation_da
 model_swa.fit(X_train, y_train,callbacks=[swa_obj],validation_data=(X_test, y_test),epochs=training_epochs,batch_size=batch_size)
 ```
 ## Example
-- Multilayer Perceptron ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_MLP_MNIST.ipynb))
+- Multilayer Perceptron ([SWA_MLP_MNIST.ipynb](https://github.com/xuyiqiang-learn/SWA_keras/blob/master/SWA_MLP_MNIST.ipynb))
 
 ## Result
 The mnist example is relatively simple and does not give full play to SWA's advantages.  SWA has great potential for scenes with large amount of data and sparse features.  In this scenario, there is obvious fluctuation in the training results of different data shuffles. SWA, an ensemble method, can get a stable high-quality model.
