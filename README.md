@@ -19,10 +19,10 @@ SWA is a simple DNN training method that can be used as a drop-in replacement fo
 * [keras](https://github.com/keras-team/keras)
 * [tensorflow](https://github.com/tensorflow/tensorflow)
 
-## Learning Rate Policy
+# Learning Rate Policy
 ![](./img/lr.png)
 
-## Tutorials
+# Tutorials
 lr_schedule.py contains learing rate change policy which works with keras `LearningRateScheduler`
 ```python
 from lr_schedule import LR_schedule
@@ -55,10 +55,10 @@ model_swa.fit(X_train, y_train,callbacks=[lr_schedule_obj,swa_obj],validation_da
 #  constant learning rate
 model_swa.fit(X_train, y_train,callbacks=[swa_obj],validation_data=(X_test, y_test),epochs=training_epochs,batch_size=batch_size)
 ```
-## Example
+# Example
 - Multilayer Perceptron ([SWA_MLP_MNIST.ipynb](https://github.com/xuyiqiang-learn/SWA_keras/blob/master/SWA_MLP_MNIST.ipynb))
 
-## Result
+# Result
 The mnist example is relatively simple and does not give full play to SWA's advantages.  SWA has great potential for scenes with large amount of data and sparse features.  In this scenario, there is obvious fluctuation in the training results of different data shuffles. SWA, an ensemble method, can get a stable high-quality model.
 # References
  * [Stochastic Weight Averaging in PyTorch](https://github.com/timgaripov/swa)
