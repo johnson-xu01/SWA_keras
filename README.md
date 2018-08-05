@@ -29,7 +29,7 @@ from lr_schedule import LR_schedule
 from keras.callbacks import LearningRateScheduler
 swa_start = ... # the number of epoch after which SWA will start to average models
 lr_start = ... # initial learning rate
-lr_end = 0.04 # SWA learning rate 
+lr_end = ... # SWA learning rate 
 training_epochs = ...
 batch_size = ...
 c= ... # the cycle period
@@ -39,7 +39,7 @@ schedule = lambda epoch: LR_schedule(epoch, flag=True, SWA_START=swa_start, lr_s
 lr_schedule_obj = LearningRateScheduler(schedule=schedule)
 
 # descent learing rate
-schedule = lambda epoch: LR_schedule(epoch, SWA_START=swa_start, lr_start=lr_start, lr_end=lr_end)
+schedule = lambda epoch: LR_schedule(epoch, flag=False, SWA_START=swa_start, lr_start=lr_start, lr_end=lr_end)
 lr_schedule_obj = LearningRateScheduler(schedule=schedule)
 ```
 swa.py contains an implementation for stochastic weight averaging (SWA). 
