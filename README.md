@@ -62,6 +62,7 @@ model_swa.fit(X_train, y_train,callbacks=[swa_obj],validation_data=(X_test, y_te
 The mnist example is relatively simple and does not give full play to SWA's advantages.  SWA has great potential for scenes with large amount of data and sparse features.  In this scenario, there is obvious fluctuation in the training results of different data shuffles. SWA, an ensemble method, can get a stable high-quality model.
 # References
  * [Stochastic Weight Averaging in PyTorch](https://github.com/timgaripov/swa)
+ * [随机加权平均 -- 在深度学习中获得最优结果的新方法](https://mp.weixin.qq.com/s/tjUHr8l-oHn_5lw-tQW4cA)
  
 
 
